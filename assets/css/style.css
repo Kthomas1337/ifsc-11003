@@ -1,3 +1,99 @@
-body { 
-    background-color: rgba(65, 8, 77, 0.815)  ;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  --s: 200px;
+  --c1: #1d1d1d;
+  --c2: #4e4f51;
+  --c3: #3c3c3c;
+
+  background:
+    repeating-conic-gradient(
+      from 30deg,
+      #0000 0 120deg,
+      var(--c3) 0 50%
+    )
+    calc(var(--s) / 2) calc(var(--s) * tan(30deg) / 2),
+
+    repeating-conic-gradient(
+      from 30deg,
+      var(--c1) 0 60deg,
+      var(--c2) 0 120deg,
+      var(--c3) 0 50%
+    );
+
+  background-size: var(--s) calc(var(--s) * tan(30deg));
+}
+
+body {
+  font-family: "Chelsea Market", system-ui;
+  font-size: 1.5rem;
+  color: #1d1d1d;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px auto;
+  padding: 20px;
+
+  background: #808080;   
+  color: #000;
+
+  border-radius: 10px;
+  max-width: 600px;
+}
+
+nav {
+  background: #808080;
+  padding: 15px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav > ul > li {
+  margin: 10px 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #1d1d1d;
+  font-size: 1.5rem;
+  padding: 6px 10px;
+  display: inline-block;
+  border-radius: 5px;
+  transition: 0.2s;
+}
+
+nav a:hover {
+  background-color: #2c3e50;
+  color: white;
+}
+
+.positioning {
+  color: #c007c0;
+  font-weight: bold;
+}
+
+.positioning ul {
+  margin-top: 8px;
+  margin-left: 20px;
+  padding: 10px;
+
+  border-left: 3px solid #1d1d1d;
+  background-color: rgba(192, 7, 192, 0.20);
+  border-radius: 8px;
+}
+
+.positioning ul a {
+  font-size: 0.95em;
+  color: #1d1d1d;
 }
